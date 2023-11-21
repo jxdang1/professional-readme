@@ -1,11 +1,11 @@
-// TODO: Include packages needed for this application
+//Include packages needed for this application
 const fs = require("fs");
 
 const inquirer = require("inquirer");
 
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// TODO: Create an array of questions for user input
+//inquirer prompts for user to input within terminal
 const questions = [
     {
         type: "input",
@@ -78,7 +78,7 @@ const questions = [
 
 ];
 
-
+// function to validate the message that users input. if there is no user input, it will return back and tells the user to input an answer
 function validateMessage(value) {
     if (value !="") {
         return true;
@@ -87,6 +87,7 @@ function validateMessage(value) {
     }
 }
 
+// function that will get the value for each type of license by using if/else statements
 function getLicense(value) {
     if (value === "GNU AGPLv3") {
         return "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
@@ -102,7 +103,7 @@ function getLicense(value) {
 }
 
 
-// TODO: Create a function to write README file
+// a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, generateMarkdown(data), function (err) {
         if (err) {
@@ -111,7 +112,7 @@ function writeToFile(fileName, data) {
     })
 }
 
-// TODO: Create a function to initialize app
+// a function to initialize app
 function init() {
     inquirer.prompt(questions).then((data) => {
         console.log(JSON.stringify(data, null, " "));
