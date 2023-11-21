@@ -32,7 +32,7 @@ const questions = [
     {
         type: "input",
             name: "usage",
-            message: "Describe how we can use this project",
+            message: "Describe how we can use this project.",
             validate: validateMessage,
         },
 
@@ -66,7 +66,7 @@ const questions = [
     {
         type: 'input',
             name: "credits",
-            message: 'Enter any credits for the project',
+            message: 'Enter any credits for the project.',
         },
 
     {
