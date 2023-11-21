@@ -71,7 +71,7 @@ const questions = [
 
     {
         type: "input",
-            name: "github username",
+            name: "github",
             message: "What is your GitHub username?",
             validate: validateMessage,
         }, 

@@ -13,42 +13,48 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# <${data.title}>
-  
+
   ## Description
 
   ${data.description}
   
-  # Project Title
-${data.title}
-${data.getLicense}
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  
+  ## Installation
+  
+  ${data.installation}
+  
+  ## Usage
+  
+  ${data.usage}
 
-# Description
-${data.description}
+  ${data.screenshot}
+  
+  ## Credits
+  
+  ${data.credits}
+  
+  ## License
+  
+  ${data.license}
+  
+  ## Badges
+  
+  ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
 
-# Table of Contents 
-* [Installation](#-Installation)
-* [Usage](#-Usage)
-* [License](#-Installation)
-* [Contributing](#-Contributing)
-* [Tests](#-Tests)
-* [Questions](#-Contact-Information)
-    
-# Installation
-${data.installation}
+  ## Contribution
 
-# Usage
-${data.usage}
+  ${data.contribute}
 
-# License 
-${data.license}
-* As this license list was not comprehensive, if you need another license, use the contact information below to ask for license to be added. 
+  # Tests
+  ${data.tests}
 
-# Contribution
-${data.contribute}
-
-# Tests
-${data.tests}
-
+  # Contact Information 
+  * GitHub Username: ${data.github}
 `;
 }
 
